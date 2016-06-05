@@ -138,7 +138,7 @@
                         var i1 = $(elem).find("input").first();
                         var i2 = $(elem).find("input").last();
                         if(i1.val() == "" || i2.val() == "") return false;
-                        var appendStr = '"'+i1.val()+'":   ';
+                        var appendStr = i1.val()+':   ';
                         var propBody = i2.val().replace(/[\n\r]/g, "").replace(/'/g, "\'").replace(/"/g, "'");
                         if (i2.val().substring(0,1) == "[" || i2.val().substring(0,1) == "{"){
                             //this thing is an object, don't append quotes
